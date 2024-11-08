@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Return Book</h1>
+        </header>
+
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="book-name">Enter Book Name</label>
+                <input type="text" id="book-name" name="book-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Enter Author</label>
+                <textarea id="author" name="author" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="serial-no">Serial No.</label>
+                <select id="serial-no" name="serial-no" required>
+                    <option value="" disabled selected>Select Serial No.</option>
+                    <option value="1">12345</option>
+                    <option value="2">67890</option>
+                    <option value="3">11223</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="issue-date">Issue Date</label>
+                <input type="text" id="issue-date" name="issue-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="return-date">Return Date</label>
+                <input type="date" id="return-date" name="return-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="remarks">Remarks (Non-Mandatory)</label>
+                <textarea id="remarks" name="remarks" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <footer>
+            <a href="index.html" class="logout-btn">Log Out</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Issue Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="date"], select, textarea, button {
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .logout {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .optional {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Book Issue Page</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#">Transactions</a>
+</nav>
+
+<div class="container">
+    <h2>Issue Book</h2>
+    <label for="bookName">Enter Book Name:</label>
+    <select id="bookName">
+        <option value="">Select a book...</option>
+        <option value="book1">Book 1</option>
+        <option value="book2">Book 2</option>
+        <option value="book3">Book 3</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <h2>Return Book</h2>
+    <label for="authorName">Enter Author Name:</label>
+    <input type="text" id="authorName" placeholder="Enter author name">
+
+    <h2>Pay Fine</h2>
+    <label for="issueDate">Issue Date:</label>
+    <input type="date" id="issueDate">
+
+    <label for="returnDate">Return Date:</label>
+    <input type="date" id="returnDate">
+
+    <label for="remarks">Remarks (Optional):</label>
+    <textarea id="remarks" rows="4" placeholder="Enter any remarks..."></textarea>
+    <p class="optional">Note: This field is non-mandatory.</p>
+
+    <button type="button" onclick="issueBook()">Issue Book</button>
+</div>
+
+<div class="logout">
+    <a href="index.html" onclick="logout()">Log Out</a>
+</div>
+
+<script>
+    function logout() {
+        // Perform any logout actions here (like clearing sessions, etc.)
+        window.location.href = "index.html"; // Redirect to index page
+    }
+
+    function issueBook() {
+        const bookName = document.getElementById('bookName').value;
+        const authorName = document.getElementById('authorName').value;
+        const issueDate = document.getElementById('issueDate').value;
+        const returnDate = document.getElementById('returnDate').value;
+        const remarks = document.getElementById('remarks').value;
+
+        if (bookName && authorName && issueDate && returnDate) {
+            alert(`Book Issued:\nBook Name: ${bookName}\nAuthor: ${authorName}\nIssue Date: ${issueDate}\nReturn Date: ${returnDate}\nRemarks: ${remarks}`);
+            // Here you can add logic to handle the book issuance
+        } else {
+            alert('Please fill in all required fields.');
+        }
+    }
+</script>
+
+</body>
+</html>

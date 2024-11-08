@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .logout {
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>User Management Page</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#">Membership</a>
+    <a href="#">Books/Movies</a>
+</nav>
+
+<div class="container">
+    <h2>Add User</h2>
+    <form id="addUser Form">
+        <label>
+            New User:
+            <input type="radio" name="userType" value="new" required> New User
+            <input type="radio" name="userType" value="existing"> Existing User
+        </label>
+        <p>All fields required to submit the form.</p>
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" name="userName" required>
+        <label for="userAdmin">
+            <input type="checkbox" id="userAdmin" name="userAdmin"> Admin
+        </label>
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>Update User</h2>
+    <form id="updateUser Form">
+        <label for="updateUser Name">Name:</label>
+        <input type="text" id="updateUser Name" name="updateUser Name" required>
+        <label for="updateStatus">
+            <input type="checkbox" id="updateStatus" name="updateStatus" checked> Active
+        </label>
+        <button type="submit">Update User</button>
+    </form>
+</div>
+
+<div class="logout">
+    <a href="index.html" onclick="logout()">Log Out</a>
+</div>
+
+<script>
+    function logout() {
+        // Perform any logout actions here (like clearing sessions, etc.)
+        window.location.href = "index.html"; // Redirect to index page
+    }
+
+    // Add event listeners for form submissions (optional)
+    document.getElementById('addUser Form').onsubmit = function(e) {
+        e.preventDefault();
+        alert('New user added: ' + document.getElementById('userName').value);
+        // Here you can add logic to handle the form submission
+    };
+
+    document.getElementById('updateUser Form').onsubmit = function(e) {
+        e.preventDefault();
+        alert('User  updated: ' + document.getElementById('updateUser Name').value);
+        // Here you can add logic to handle the form submission
+    };
+</script>
+
+</body>
+</html>

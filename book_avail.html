@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Availability Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input[type="text"], button {
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .logout {
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Book Availability Page</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#">Transactions</a>
+</nav>
+
+<div class="container">
+    <h2>Check Book Availability</h2>
+    <label for="availabilityBook">Is book available?</label>
+    <select id="availabilityBook">
+        <option value="">Select a book...</option>
+        <option value="book1">famous five</option>
+        <option value="book2">harry potter</option>
+        <option value="book3">life of pie</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <h2>Issue Book</h2>
+    <label for="issueBook">Enter Book Name</label>
+    <select id="issueBook">
+        <option value="">Select a book...</option>
+        <option value="book1">robin hood</option>
+        <option value="book2">geronimo stilton</option>
+        <option value="book3">lilo and stich</option>
+        <!-- Add more options as needed -->
+    </select>
+    <button type="button" onclick="issueBook()">Issue Book</button>
+
+    <h2>Return Book</h2>
+    <label for="returnAuthor">Enter Author</label>
+    <select id="returnAuthor">
+        <option value="">Select an author...</option>
+        <option value="author1">enid bliten</option>
+        <option value="author2">persy jackson</option>
+        <option value="author3">lithon storea</option>
+        <!-- Add more options as needed -->
+    </select>
+    <button type="button" onclick="returnBook()">Return Book</button>
+
+    <h2>Pay Fine</h2>
+    <button type="button" onclick="payFine()">Pay Fine</button>
+</div>
+
+<div class="logout">
+    <a href="index.html" onclick="logout()">Log Out</a>
+</div>
+
+<script>
+    function logout() {
+        // Perform any logout actions here (like clearing sessions, etc.)
+        window.location.href = "index.html"; // Redirect to index page
+    }
+
+    function issueBook() {
+        const bookName = document.getElementById('issueBook').value;
+        if (bookName) {
+            alert('Book issued: ' + bookName);
+            // Here you can add logic to handle the book issuance
+        } else {
+            alert('Please select a book to issue.');
+        }
+    }
+
+    function returnBook() {
+        const authorName = document.getElementById('returnAuthor').value;
+        if (authorName) {
+            alert('Book returned by author: ' + authorName);
+            // Here you can add logic to handle the book return
+        } else {
+            alert('Please select an author to return a book.');
+        }
+    }
+
+    function payFine() {
+        alert('Fine

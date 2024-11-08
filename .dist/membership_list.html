@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Active Memberships</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #343a40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #343a40;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .logout {
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>List of Active Memberships</h1>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="masterlist.html">Master List of Books</a>
+    <a href="mastermovie.html">Master List of Movies</a>
+    <a href="membership_list.html">Master List of Memberships</a>
+    <a href="ai.html">Active Issues</a>
+    <a href="overdue_returns.html">Overdue Returns</a>
+    <a href="issue_request.html">Issue Requests</a>
+</nav>
+
+<div class="container">
+    <h2>Active Memberships</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Membership Id</th>
+                <th>Name of Member</th>
+                <th>Contact Number</th>
+                <th>Contact Address</th>
+                <th>Aadhar Card No</th>
+                <th>Start Date of Membership</th>
+                <th>End Date of Membership</th>
+                <th>Status (Active/Inactive)</th>
+                <th>Amount Pending (Fine)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>John Doe</td>
+                <td>9876543210</td>
+                <td>123 Elm St, City</td>
+                <td>1234-5678-9101</td>
+                <td>2023-01-15</td>
+                <td>2024-01-15</td>
+                <td>Active</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Jane Smith</td>
+                <td>9876543211</td>
+                <td>456 Oak St, City</td>
+                <td>1234-5678-9102</td>
+                <td>2023-01-20</td>
+                <td>2024-01-20</td>
+                <td>Active</td>
+                <td>$5</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Emily Johnson</td>
+                <td>9876543212</td>
+                <td>789 Pine St, City</td>
+                <td>1234-5678-9103</td>
+                <td>2023-02-05</td>
+                <td>2024-02-05</td>
+                <td>Active</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Michael Brown</td>
+                <td>9876543213</td>
+                <td>321 Maple St, City</td>
+                <td>1234-5678-9104</td>
+                <td>2023-02-15</td>
+                <td>2024-02-15</td>
+                <td>Active</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Linda Davis</td>
+                <td>9876543214</td>
+                <td>654 Cedar St, City</td>
+                <td>1234-5678-9105</td>
+                <td>2023-03-01</td>
+                <td>2024-03-01</td>
+                <td>Active</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>James Wilson</td>
+                <td>9876543215</td>
+                <td>987 Birch St, City</td>
+                <td>1234-5678-9106</td>
+                <td>2023-03-10</td>
+                <td>2024-03-10</td>
+                <td>Active</td>
+                <td>$15</td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>Patricia Garcia</td>
+                <td>9876543216</td>
+                <td>159 Spruce St, City</td>
+                <td>1234-5678-9107</td>
+                <td>2023-03-20</td>
+                <td>2024-03-20</td>
+                <td>Active</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>Robert Martinez</td>
+                <td>9876543217</td>
+                <td>753 Willow St, City</td>
+                <td>1234-5678-9108</td>
+                <td>2023-04-01</td>
+                <td>2024-04-01</td>
+                <td>Active</td>
+                <td>$20</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="logout">
+    <a href="index.html" onclick="logout()">Log Out</a>
+</div>
+
+<script>
+    function logout() {
+        // Perform any logout actions here (like clearing sessions, etc.)
+        window.location.href = "index.html"; // Redirect to index page
+    }
+</script>
+
+</body>
+</html>

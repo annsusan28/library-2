@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master List of Movies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #343a40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #343a40;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .logout {
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Master List of Movies</h1>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="reports.html">Reports</a>
+</nav>
+
+<div class="container">
+    <h2>Movies Information</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Serial No</th>
+                <th>Name of Movie</th>
+                <th>Director Name</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Cost</th>
+                <th>Procurement Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>The Shawshank Redemption</td>
+                <td>Frank Darabont</td>
+                <td>Drama</td>
+                <td>Available</td>
+                <td>$12.99</td>
+                <td>2023-01-10</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The Godfather</td>
+                <td>Francis Ford Coppola</td>
+                <td>Crime</td>
+                <td>Checked Out</td>
+                <td>$14.99</td>
+                <td>2023-02-15</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The Dark Knight</td>
+                <td>Christopher Nolan</td>
+                <td>Action</td>
+                <td>Available</td>
+                <td>$16.50</td>
+                <td>2023-03-20</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Pulp Fiction</td>
+                <td>Quentin Tarantino</td>
+                <td>Crime</td>
+                <td>Available</td>
+                <td>$10.99</td>
+                <td>2023-04-25</td>
+            </tr>
+            <td>5</td>
+            <td>Forrest Gump</td>
+            <td>Robert Zemeckis</td>
+            <td>Drama</td>
+            <td>Available</td>
+            <td>$11.50</td>
+            <td>2023-05-05</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Inception</td>
+            <td>Christopher Nolan</td>
+            <td>Sci-Fi</td>
+            <td>Checked Out</td>
+            <td>$13.00</td>
+            <td>2023-06-10</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>The Matrix</td>
+            <td>Lana Wachowski, Lilly Wachowski</td>
+            <td>Sci-Fi</td>
+            <td>Available</td>
+            <td>$15.00</td>
+            <td>2023-07-15</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Gladiator</td>
+            <td>Ridley Scott</td>
+            <td>Action</td>
+            <td>Available</td>
+            <td>$12.00</td>
+            <td>2023-08-20</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Fight Club</td>
+            <td>David Fincher</td>
+            <td>Drama</td>
+            <td>Checked Out</td>
+            <td>$9.50</td>
+            <td>2023-09-25</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Interstellar</td>
+            <td>Christopher Nolan</td>
+            <td>Sci-Fi</td>
+            <td>Available</td>
+            <td>$14.00</td>
+            <td>2023-10-05</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="logout">
+<a href="index.html" onclick="logout()">Log Out</a>
+</div>
+
+<script>
+function logout() {
+    // Perform any logout actions here (like clearing sessions, etc.)
+    window.location.href = "index.html"; // Redirect to index page
+}
+</script>
+
+</body>
+</html>

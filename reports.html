@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logout {
+            text-align: right;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e9ecef;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Reports Page</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#">Available Reports</a>
+</nav>
+
+<div class="container">
+    <h2>Available Reports</h2>
+    <ul>
+        <li><a href="masterlist.html">Master List of Books</a></li>
+        <li><a href="mastermovie.html">Master List of Movies</a></li>
+        <li><a href="membership_list.html">Master List of Memberships</a></li>
+        <li><a href="ai.html">Active Issues</a></li>
+        <li><a href="overdue_returns.html">Overdue Returns</a></li>
+        <li><a href="issue_request.html">Pending Issue Requests</a></li>
+    </ul>
+</div>
+
+<div class="logout">
+    <a href="index.html" onclick="logout()">Log Out</a>
+</div>
+
+<script>
+    function logout() {
+        // Perform any logout actions here (like clearing sessions, etc.)
+        window.location.href = "index.html"; // Redirect to index page
+    }
+</script>
+
+</body>
+</html>

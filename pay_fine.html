@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Fine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pay Fine</h1>
+        </header>
+
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="book-name">Enter Book Name</label>
+                <input type="text" id="book-name" name="book-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Enter Author</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+
+            <div class="form-group">
+                <label for="serial-no">Serial No.</label>
+                <input type="text" id="serial-no" name="serial-no" required>
+            </div>
+
+            <div class="form-group">
+                <label for="issue-date">Issue Date</label>
+                <input type="date" id="issue-date" name="issue-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="return-date">Return Date</label>
+                <input type="date" id="return-date" name="return-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="actual-return-date">Actual Return Date</label>
+                <input type="date" id="actual-return-date" name="actual-return-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fine-calculated">Fine Calculated</label>
+                <input type="text" id="fine-calculated" name="fine-calculated" value="0" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="fine-paid">Fine Paid</label>
+                <input type="checkbox" id="fine-paid" name="fine-paid">
+            </div>
+
+            <div class="form-group">
+                <label for="remarks">Remarks (Non-Mandatory)</label>
+                <textarea id="remarks" name="remarks" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <footer>
+            <a href="index.html" class="logout-btn">Log Out</a>
+        </footer>
+    </div>
+</body>
+</html>
